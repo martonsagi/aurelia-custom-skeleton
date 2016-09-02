@@ -1,0 +1,12 @@
+{
+    "title": "Aurelia Custom Skeleton",
+    "apiBaseUrl": "",
+    "root": "layouts/layout-main",
+    "routeUrl": "config.routes.json",
+    "pushState": false,
+    "viewStrategy": {
+        "viewModelResolve": "customFolder",
+        "viewModelBasePath": "viewmodels/"
+    },
+    "configUrl": null
+}

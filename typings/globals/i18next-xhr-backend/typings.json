@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "D:\\Projects\\aurelia-custom-skeleton\\node_modules\\i18next-xhr-backend\\typings\\i18next-xhr-backend.d.ts",
+    "raw": "file:./node_modules/i18next-xhr-backend/typings/i18next-xhr-backend.d.ts",
+    "typings": "D:\\Projects\\aurelia-custom-skeleton\\node_modules\\i18next-xhr-backend\\typings\\i18next-xhr-backend.d.ts"
+  }
+}

@@ -1,0 +1,83 @@
+[
+    {
+        "route": [
+            "",
+            "welcome",
+            "notfound"
+        ],
+        "name": "welcome",
+        "moduleId": "home/welcome",
+        "nav": true,
+        "title": "Welcome",
+        "settings": {
+            "icon": "fa fa-home",
+            "parent": null,
+            "groupTitle": "Main",
+            "isRoute": true
+        }
+    },
+    {
+        "route": "about",
+        "name": "about",
+        "moduleId": "home/about",
+        "nav": true,
+        "title": "About Us",
+        "settings": {
+            "icon": "fa fa-home",
+            "parent": null
+        }
+    },
+    {
+        "route": "submenu",
+        "name": "submenu",
+        "moduleId": "home/about",
+        "nav": true,
+        "title": "Submenu 1",
+        "settings": {
+            "icon": "fa fa-home",
+            "parent": null,
+            "groupTitle": "Submenus"
+        }
+    },
+    {
+        "route": "users",
+        "name": "users-submenu",
+        "moduleId": "home/users",
+        "nav": true,
+        "title": "Github Users",
+        "settings": {
+            "parent": "submenu"
+        }
+    },
+    {
+        "route": "child-router",
+        "name": "child-router",
+        "moduleId": "home/child-router",
+        "nav": true,
+        "title": "Child router",
+        "settings": {
+            "parent": "submenu"
+        }
+    },
+    {
+        "route": "users",
+        "name": "users",
+        "moduleId": "home/users",
+        "nav": true,
+        "title": "Github Users",
+        "settings": {
+            "parent": "users-submenu"
+        }
+    },
+    {
+        "route": "about",
+        "name": "about",
+        "moduleId": "home/about",
+        "nav": true,
+        "title": "About Us",
+        "settings": {
+            "icon": "fa fa-home",
+            "parent": null
+        }
+    }
+]

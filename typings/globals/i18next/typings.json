@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/1fb90278ce678b668e0bed069095b1920dc658ec/i18next/i18next.d.ts",
+    "raw": "registry:dt/i18next#2.3.4+20160803175212",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/1fb90278ce678b668e0bed069095b1920dc658ec/i18next/i18next.d.ts"
+  }
+}

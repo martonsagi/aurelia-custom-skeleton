@@ -1,0 +1,69 @@
+{
+    "name": "aurelia-custom-skeleton",
+    "version": "0.1.0",
+    "description": "A customized Aurelia skeleton application, built with aurelia-cli",
+    "author": "Marton Sagi <hello@martonsagi.me>",
+    "homepage": "https://github.com/martonsagi/aurelia-custom-skeleton",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/martonsagi/aurelia-custom-skeleton/issues"
+    },
+    "keywords": [
+        "aurelia",
+        "skeleton",
+        "aurelia-cli",
+        "typescript"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/martonsagi/aurelia-custom-skeleton"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "aurelia-animator-css": "^1.0.0",
+        "aurelia-bootstrapper": "^1.0.0",
+        "aurelia-fetch-client": "^1.0.0",
+        "aurelia-http-client": "^1.0.0",
+        "aurelia-i18n": "^1.1.1",
+        "aurelia-validatejs": "^0.7.0",
+        "aurelia-validation": "^0.12.2",
+        "bluebird": "^3.4.1",
+        "bootstrap": "^3.3.7",
+        "font-awesome": "^4.6.3",
+        "i18next-xhr-backend": "^1.1.0",
+        "jquery": "^2.2.4"
+    },
+    "peerDependencies": {},
+    "devDependencies": {
+        "aurelia-cli": "^0.18.0",
+        "aurelia-testing": "^1.0.0-beta.2.0.0",
+        "aurelia-tools": "^0.2.2",
+        "browser-sync": "^2.13.0",
+        "connect-history-api-fallback": "^1.2.0",
+        "event-stream": "^3.3.3",
+        "gulp": "github:gulpjs/gulp#4.0",
+        "gulp-changed-in-place": "^2.0.3",
+        "gulp-clean": "^0.3.2",
+        "gulp-clean-css": "^2.0.12",
+        "gulp-concat": "^2.6.0",
+        "gulp-less": "^3.1.0",
+        "gulp-notify": "^2.2.0",
+        "gulp-plumber": "^1.1.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sourcemaps": "^2.0.0-alpha",
+        "gulp-tslint": "^5.0.0",
+        "gulp-typescript": "^2.13.6",
+        "jasmine-core": "^2.4.1",
+        "karma": "^0.13.22",
+        "karma-chrome-launcher": "^1.0.1",
+        "karma-jasmine": "^1.0.2",
+        "karma-typescript-preprocessor": "^0.2.1",
+        "minimatch": "^3.0.2",
+        "through2": "^2.0.1",
+        "tslint": "^3.11.0",
+        "typescript": ">=1.9.0-dev || ^2.0.0",
+        "typings": "^1.3.0",
+        "uglify-js": "^2.6.3",
+        "vinyl-fs": "^2.4.3"
+    }
+}
