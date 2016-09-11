@@ -1,5 +1,6 @@
 //#region import
 
+import './_polyfills';
 import {Aurelia } from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 import {Registry} from '../services/registry';

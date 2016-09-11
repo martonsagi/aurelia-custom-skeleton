@@ -86,7 +86,7 @@ body {
 #sidebar ul.nav li a,
 #sidebar ul.nav li a:link,
 #sidebar ul.nav li a:visited {
-  padding: 5px 20px;
+  padding: 10px 20px;
   color: #cbcbcb;
   font-size: 1.1em;
 }
