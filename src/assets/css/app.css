@@ -23,6 +23,7 @@ body {
   z-index: 1049;
   background: #3c8dbc;
   color: #fff;
+  border-radius: 0;
 }
 #topbar ul.nav > li {
   float: left;
@@ -83,6 +84,10 @@ body {
 .sidebar-hidden #sidebar {
   display: none;
 }
+.sidebar-close-btn {
+  padding: 3px 10px;
+  border: 1px solid #555;
+}
 #sidebar ul.nav li a,
 #sidebar ul.nav li a:link,
 #sidebar ul.nav li a:visited {
@@ -101,6 +106,9 @@ body {
 }
 #sidebar ul.nav li a > i {
   padding-right: 5px;
+}
+#sidebar ul.nav li a i.submenu-arrow {
+  line-height: 1.5em;
 }
 #sidebar ul.nav li a i.submenu-arrow:before {
   content: "\f0d7";

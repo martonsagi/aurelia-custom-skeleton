@@ -34,7 +34,7 @@
         "nav": true,
         "title": "Localization",
         "settings": {
-            "icon": "fa fa-home",
+            "icon": "fa fa-globe",
             "parent": null,
             "isRoute": true,
             "groupTitle": "Examples"
@@ -47,7 +47,7 @@
         "nav": true,
         "title": "Validation",
         "settings": {
-            "icon": "fa fa-home",
+            "icon": "fa fa-check-square-o",
             "parent": null,
             "isRoute": true
         }
@@ -59,7 +59,7 @@
         "nav": true,
         "title": "Submenu 1",
         "settings": {
-            "icon": "fa fa-home",
+            "icon": "fa fa-list",
             "parent": null,
             "groupTitle": "Submenus"
         }
@@ -101,7 +101,7 @@
         "nav": true,
         "title": "About Us",
         "settings": {
-            "icon": "fa fa-home",
+            "icon": "fa fa-user",
             "parent": null
         }
     }

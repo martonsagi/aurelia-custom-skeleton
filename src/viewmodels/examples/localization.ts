@@ -14,7 +14,7 @@ export class Localization {
         this.i18n.setLocale('hu');
     }
 
-    unbind() {
-        this.i18n.setLocale('en');
+    canDeactivate() {
+        return this.i18n.setLocale('en').then(_ => true);
     }
 }
