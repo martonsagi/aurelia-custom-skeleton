@@ -1,0 +1,43 @@
+﻿@import "./variables.less";
+@import "./mixins.less";
+
+#sidebar-toggle {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#sidebar {
+    padding: 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: @sidebar-width;
+    height: 100%;
+    background: @bg-sidebar;
+    overflow: auto;
+    z-index: 1050;
+}
+
+#sidebar-top {
+    margin-bottom: 20px;
+    padding: 10px 20px 10px;
+    color: @color-sidebar-top;
+    background-color: @bg-sidebar-top;
+    .box-shadow(@sizes: inset 0 -1px 0, @color: @color-black);
+
+    div.header {    
+        font-size: 1.5em;
+    }
+}
+
+.sidebar-hidden {
+    margin-left: 0 !important;
+
+    #topbar {
+        padding-left: 0 !important;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}

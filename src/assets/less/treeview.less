@@ -1,0 +1,63 @@
+﻿@import "./variables.less";
+@import "./mixins.less";
+
+#sidebar {
+    ul.nav {
+        li {
+            a, a:link, a:visited {
+                padding: 5px 20px;
+                color: @color-treelink-visited;
+                font-size: 1.1em;
+            }
+
+            &.active a,
+            a:active {
+                color: @color-treelink-active;
+            }
+            
+            a:hover,
+            a:focus {
+                color: @color-treelink-hover;
+                background: @bg-treelink-hover;
+            }
+
+            a > i {
+                padding-right: 5px;
+            }
+
+            a i.submenu-arrow:before {
+                content: "\f0d7";
+            }
+            
+            a.tree-hidden i.submenu-arrow:before {
+                content: "\f0d9";
+            }
+
+        }
+
+        .group-title {
+            padding: 15px 20px 5px;
+            color: @color-treelink-title;
+            text-transform: uppercase;
+        }
+        
+        &.nav-submenu {
+            li {
+                a {
+                    padding-left: 40px;
+                    font-size: 1.1em;
+                }
+
+                ul li a {
+                    padding-left: 50px;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    
+}
+
+.tree-hide {
+    display: none;
+}

@@ -2,8 +2,11 @@
 
 import {Aurelia } from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
-import {Registry} from './services/registry';
-import environment from './environment';
+import {Registry} from '../services/registry';
+import environment from '../environment';
+import { configurePlugins } from './plugins';
+import { configureFeatures } from './features';
+import { configureResources } from './resources';
 
 //#endregion
 
@@ -15,7 +18,7 @@ import environment from './environment';
     }
 });
 
-export class Boot {
+export class Startup {
 
     //#region Properties
 
@@ -36,15 +39,10 @@ export class Boot {
         t.aurelia = aurelia;
 
         t.aurelia.use
-            .standardConfiguration()
-            .feature('resources');
+            .standardConfiguration();
 
         if (environment.debug) {
             aurelia.use.developmentLogging();
-        }
-
-        if (environment.testing) {
-            aurelia.use.plugin('aurelia-testing');
         }
 
         t.registry = t.aurelia.container.get(Registry);
@@ -57,6 +55,11 @@ export class Boot {
                     .then(r => {
                         config.routes = t.updateRoutes(config, JSON.parse(r.response));
                         t.registry.set("config", config);
+
+                        configureFeatures(t.aurelia, config);
+                        configurePlugins(t.aurelia, config);
+                        configureResources(t.aurelia, config)
+
                         t.start();
                     })
                     .catch(err => console.log(err));

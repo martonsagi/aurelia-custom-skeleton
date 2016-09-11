@@ -1,11 +1,141 @@
-/* Mixins */
-
 /* Basic imports */
-/* Variables */
+/* Base Layout */
+/* Base colors */
+/* Treeview colors */
+/* Sidebar colors */
+/* Topbar colors */
 /* Mixins */
 /* Style imports */
 body {
   padding: 10px;
 }
-
-/* Variables */
+#main {
+  margin-left: 250px;
+  padding: 80px 20px 20px;
+}
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  padding-left: 250px;
+  z-index: 1049;
+  background: #3c8dbc;
+  color: #fff;
+}
+#topbar ul.nav > li {
+  float: left;
+}
+#topbar ul.nav > li a {
+  font-size: 1em;
+}
+#topbar ul.nav > li > a {
+  padding: 15px 20px;
+  color: inherit;
+}
+#topbar ul.nav > li > a:hover,
+#topbar ul.nav > li > a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#topbar ul.nav .open > a,
+#topbar ul.nav .open > a:hover,
+#topbar ul.nav .open > a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.navbar-left {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+#sidebar-toggle {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#sidebar {
+  padding: 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #222d32;
+  overflow: auto;
+  z-index: 1050;
+}
+#sidebar-top {
+  margin-bottom: 20px;
+  padding: 10px 20px 10px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 -1px 0 #222;
+  -moz-box-shadow: inset 0 -1px 0 #222;
+  box-shadow: inset 0 -1px 0 #222;
+}
+#sidebar-top div.header {
+  font-size: 1.5em;
+}
+.sidebar-hidden {
+  margin-left: 0 !important;
+}
+.sidebar-hidden #topbar {
+  padding-left: 0 !important;
+}
+.sidebar-hidden #sidebar {
+  display: none;
+}
+#sidebar ul.nav li a,
+#sidebar ul.nav li a:link,
+#sidebar ul.nav li a:visited {
+  padding: 5px 20px;
+  color: #cbcbcb;
+  font-size: 1.1em;
+}
+#sidebar ul.nav li.active a,
+#sidebar ul.nav li a:active {
+  color: #fff;
+}
+#sidebar ul.nav li a:hover,
+#sidebar ul.nav li a:focus {
+  color: #fff;
+  background: #222;
+}
+#sidebar ul.nav li a > i {
+  padding-right: 5px;
+}
+#sidebar ul.nav li a i.submenu-arrow:before {
+  content: "\f0d7";
+}
+#sidebar ul.nav li a.tree-hidden i.submenu-arrow:before {
+  content: "\f0d9";
+}
+#sidebar ul.nav .group-title {
+  padding: 15px 20px 5px;
+  color: #aaaaaa;
+  text-transform: uppercase;
+}
+#sidebar ul.nav.nav-submenu li a {
+  padding-left: 40px;
+  font-size: 1.1em;
+}
+#sidebar ul.nav.nav-submenu li ul li a {
+  padding-left: 50px;
+  font-size: 1em;
+}
+.tree-hide {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #topbar {
+    padding-left: 0;
+  }
+  #main {
+    margin-left: 0;
+  }
+  #sidebar {
+    display: none;
+  }
+  .sidebar-visible #sidebar {
+    display: block !important;
+    width: 100%;
+  }
+}

@@ -14,7 +14,7 @@
 ## Custom build tasks
 
 * `copy-css`
-* `copy-fonts`
+* `copy-files`
 * `minify-css`
 * `dist`: publishes the application by copying all related files into `dist` folder
 
@@ -40,13 +40,16 @@ Also, `aurelia.json` has been extended with new sections:
             "node_modules/bootstrap/dist/css/*.min.css"
         ]
     },
-    "copyFonts": {
-        "output": "fonts",
-        "sources": [
-            "node_modules/font-awesome/fonts/*",
-            "node_modules/bootstrap/dist/fonts/*"
-        ]
-    },
+    "copyFiles": [
+        {
+            "name": "copyFonts",
+            "output": "fonts",
+            "sources": [
+                "node_modules/font-awesome/fonts/*",
+                "node_modules/bootstrap/dist/fonts/*"
+            ]
+        }
+    ],
     "dist": {
         "output": "dist",
         "sources": [

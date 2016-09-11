@@ -1,9 +1,8 @@
 //#region import
 
-import {autoinject, useView} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-http-client';
-import {Redirect, AppRouter} from 'aurelia-router';
-import {Registry} from '../services/registry';
+import { autoinject } from 'aurelia-framework';
+import { AppRouter } from 'aurelia-router';
+import { Registry } from '../services/registry';
 
 //#endregion
 
@@ -17,16 +16,30 @@ export class Layout {
     registry: Registry;
     router: AppRouter;
 
+    sidebarVisibleWindowWidth = 768;
+    sidebarHiddenClass = "";
+    sidebarVisible: boolean;
+
     //#endregion
 
     constructor(registry: Registry) {
         this.registry = registry;
         this.registry.set("layout", this);
+
+        this.sidebarVisible = window.innerWidth >= this.sidebarVisibleWindowWidth;
     }
 
     //#region au events
 
     attached() {
+        let t = this;
+        window.addEventListener("resize", function (e) {
+            if (window.innerWidth <= t.sidebarVisibleWindowWidth) {
+                t.handleSidebar(false);
+            } else {
+                t.handleSidebar(true);
+            }
+        });
     }
 
     configureRouter(config, router) {
@@ -64,6 +77,44 @@ export class Layout {
         config.addPreActivateStep(step);
 
         this.router = router;
+    }
+
+    //#endregion
+
+
+    //#region Sidebar show/hide
+
+    toggleSidebar(event) {
+        event.preventDefault();
+        this.handleSidebar(!this.sidebarVisible);
+        event.returnValue = true;
+    }
+
+
+    handleSidebar(show) {
+        this.sidebarVisible = show;
+
+        let sidebar = $('#sidebar');
+
+        if (show) {
+            sidebar.addClass('animated fadeIn');
+            this.sidebarHiddenClass = "sidebar-visible";
+        } else {
+            this.sidebarHiddenClass = "sidebar-hidden";
+        }
+    }
+
+    menuClick(event) {
+        if (event.detail.hasChildren === true) {
+            event.preventDefault();
+            return false;
+        } else {
+            if (window.innerWidth <= this.sidebarVisibleWindowWidth) {
+                this.handleSidebar(false);
+            }
+
+            return true;
+        }
     }
 
     //#endregion

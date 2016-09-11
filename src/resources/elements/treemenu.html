@@ -1,0 +1,25 @@
+<template>
+
+    <ul class="${childTree === true ? 'nav nav-submenu tree-hide animated fadeIn' : 'nav'}">
+
+        <li repeat.for="row of filteredList" class="${row.isActive ? 'active' : ''}">
+
+            <div class="group-title" if.bind="row.settings.groupTitle">${row.settings.groupTitle}</div>
+
+            <a href="${ !row.hasChildren ? generate(row) : '#' }" click.trigger="click($event)"  class="${row.hasChildren ? 'tree-hidden' : ''}">
+
+                <i if.bind="row.settings.icon" class.bind="row.settings.icon"></i>
+
+                <span class="menu-title">${row.title}</span>
+
+                <i if.bind="row.hasChildren" class="submenu-arrow fa pull-right" style="line-height: 2em;"></i>
+            </a>
+
+            <treemenu if.bind="row.hasChildren"
+                      current-menu.bind="row"
+                      menuitems.bind="menuitems"
+                      child-tree.bind="true"></treemenu>
+        </li>
+    </ul>
+
+</template>

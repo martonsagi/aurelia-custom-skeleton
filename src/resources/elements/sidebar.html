@@ -1,0 +1,17 @@
+<template>
+
+    <nav id="sidebar">
+        <div id="sidebar-top">
+            <div class="header pull-left">${router.title}</div>
+            <div class="pull-right">
+                <span class="visible-xs-block" click.delegate="layout.toggleSidebar($event)">
+                    <i class="fa fa-close"></i>
+                </span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <treemenu menuitems.bind="menus" on-treeitem-click.delegate="layout.menuClick($event)"></treemenu>
+    </nav>
+
+</template>

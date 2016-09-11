@@ -1,5 +1,5 @@
 {
-    "title": "Aurelia Custom Skeleton",
+    "title": "Aurelia Skeleton",
     "apiBaseUrl": "",
     "root": "layouts/layout-main",
     "routeUrl": "config.routes.json",

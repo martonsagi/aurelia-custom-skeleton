@@ -17,19 +17,19 @@
             "./typings/**/*.d.ts",
             "./typings_custom/**/*.d.ts"
         ],
-        "source": "src\\**\\*.ts"
+        "source": "src/**/*.ts"
     },
     "markupProcessor": {
         "id": "none",
         "displayName": "None",
         "fileExtension": ".html",
-        "source": "src\\**\\*.html"
+        "source": "src/**/*.html"
     },
     "cssProcessor": {
         "id": "less",
         "displayName": "Less",
         "fileExtension": ".less",
-        "source": "src\\**\\*.less",
+        "source": "src/assets/less/template.less",
         "filename": "app.css"
     },
     "editor": {
@@ -39,7 +39,7 @@
     "unitTestRunner": {
         "id": "karma",
         "displayName": "Karma",
-        "source": "test\\unit\\**\\*.ts"
+        "source": "test/unit/**/*.ts"
     },
     "minifyCss": {
         "output": "css",
@@ -51,32 +51,37 @@
         "filename": "base.css",
         "sources": [
             "node_modules/font-awesome/css/*.min.css",
-            "node_modules/bootstrap/dist/css/*.min.css"
+            "node_modules/bootstrap/dist/css/*.min.css",
+            "node_modules/aureéia-editables/dist/css/*.css"
         ]
     },
-    "copyFonts": {
-        "output": "fonts",
-        "sources": [
-            "node_modules/font-awesome/fonts/*",
-            "node_modules/bootstrap/dist/fonts/*"
-        ]
-    },
+    "copyFiles": [
+        {
+            "name": "copyFonts",
+            "output": "fonts",
+            "sources": [
+                "node_modules/font-awesome/fonts/*",
+                "node_modules/bootstrap/dist/fonts/*"
+            ]
+        }
+    ],
     "dist": {
         "output": "dist",
         "sources": [
             "./css/**/*",
             "./fonts/**/*",
+            "./locales/**/*",
             "./scripts/**/*",
             "./index.html"
         ]
     },
     "paths": {
         "root": "src",
-        "resources": "src\\resources",
-        "elements": "src\\resources\\elements",
-        "attributes": "src\\resources\\attributes",
-        "valueConverters": "src\\resources\\value-converters",
-        "bindingBehaviors": "src\\resources\\binding-behaviors"
+        "resources": "src/resources",
+        "elements": "src/resources/elements",
+        "attributes": "src/resources/attributes",
+        "valueConverters": "src/resources/value-converters",
+        "bindingBehaviors": "src/resources/binding-behaviors"
     },
     "testFramework": {
         "id": "jasmine",
@@ -186,14 +191,20 @@
                         "path": "../node_modules/i18next-xhr-backend/dist/umd",
                         "main": "i18nextXHRBackend"
                     },
-                    "jquery",
+                    "lodash",
+                    {
+                        "name": "jquery",
+                        "path": "../node_modules/jquery/dist",
+                        "main": "jquery.min"
+                    },
                     {
                         "name": "bootstrap",
                         "path": "../node_modules/bootstrap/dist",
                         "main": "js/bootstrap.min",
                         "deps": ["jquery"],
                         "exports": "$"
-                    }
+                    },
+                    "moment"
                 ]
             }
         ]

@@ -1,12 +1,11 @@
 //#region import
 
-import 'jquery';
-import 'bootstrap';
-import {Boot} from './boot';
+// our initializer class
+import { Startup } from './startup/_startup';
 
 //#endregion
 
 export function configure(aurelia) {
-    let boot = new Boot();
-    boot.init(aurelia);
+    let startup = new Startup();
+    startup.init(aurelia);
 };

@@ -1,0 +1,48 @@
+﻿@import "./variables.less";
+@import "./mixins.less";
+
+#topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    padding-left: @sidebar-width;
+    z-index: 1049;
+    background: @bg-topbar;
+    color: @color-topbar;
+
+    ul.nav { 
+        & > li {
+            float: left;
+
+            a {
+                font-size: 1em;
+            }
+
+            & > a {
+                padding: 15px 20px;
+                color: inherit;
+            }
+
+            & > a:hover, 
+            & > a:focus {
+                background-color: @bg-toplink-active;
+            }
+        }
+
+        .open {
+            & > a, 
+            & > a:hover, 
+            & > a:focus {
+                background-color: @bg-toplink-hover;
+            }
+        }
+    }
+
+}
+
+.navbar-left {
+    margin-left: 0px;
+    margin-right: 0px;
+}

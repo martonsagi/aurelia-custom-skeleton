@@ -1,0 +1,46 @@
+<template>
+    <header id="topbar" class="panel" role="navigation">
+
+        <ul class="nav pull-left">
+            <li>
+                <a id="sidebar-toggle" href="#" click.delegate="layout.toggleSidebar($event)">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </li>
+            <li class="loader" show.bind="router.isNavigating">
+                <a href="#">
+                    <div class="spinner">
+                        <div class="bounce1"></div>
+                        <div class="bounce2"></div>
+                        <div class="bounce3"></div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="nav pull-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <i class="fa fa-user" style="padding-right: 5px"></i>
+
+                    Username
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li><a href="#">Messages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#/profile">Settings</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" title="Logout">
+                    <i class="fa fa-sign-out"></i>
+                </a>
+            </li>
+        </ul>
+
+        <span class="clearfix"></span>
+
+    </header>
+
+</template>

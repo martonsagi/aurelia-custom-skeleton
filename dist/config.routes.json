@@ -2,8 +2,7 @@
     {
         "route": [
             "",
-            "welcome",
-            "notfound"
+            "welcome"
         ],
         "name": "welcome",
         "moduleId": "home/welcome",
@@ -17,18 +16,44 @@
         }
     },
     {
-        "route": "about",
-        "name": "about",
-        "moduleId": "home/about",
-        "nav": true,
-        "title": "About Us",
+        "route": [ "notfound" ],
+        "name": "notfound",
+        "moduleId": "home/welcome",
+        "nav": false,
+        "title": "404 | Page not found",
         "settings": {
-            "icon": "fa fa-home",
-            "parent": null
+            "icon": "fa fa-close",
+            "parent": null,
+            "isRoute": true
         }
     },
     {
-        "route": "submenu",
+        "route": "localization",
+        "name": "localization",
+        "moduleId": "examples/localization",
+        "nav": true,
+        "title": "Localization",
+        "settings": {
+            "icon": "fa fa-home",
+            "parent": null,
+            "isRoute": true,
+            "groupTitle": "Examples"
+        }
+    },
+    {
+        "route": "validation",
+        "name": "validation",
+        "moduleId": "examples/validation",
+        "nav": true,
+        "title": "Validation",
+        "settings": {
+            "icon": "fa fa-home",
+            "parent": null,
+            "isRoute": true
+        }
+    },
+    {
+        "route": ["submenu"],
         "name": "submenu",
         "moduleId": "home/about",
         "nav": true,
@@ -40,7 +65,7 @@
         }
     },
     {
-        "route": "users",
+        "route": ["users"],
         "name": "users-submenu",
         "moduleId": "home/users",
         "nav": true,
@@ -50,7 +75,7 @@
         }
     },
     {
-        "route": "child-router",
+        "route": ["child-router"],
         "name": "child-router",
         "moduleId": "home/child-router",
         "nav": true,
@@ -60,7 +85,7 @@
         }
     },
     {
-        "route": "users",
+        "route": ["users"],
         "name": "users",
         "moduleId": "home/users",
         "nav": true,
@@ -70,7 +95,7 @@
         }
     },
     {
-        "route": "about",
+        "route": ["about"],
         "name": "about",
         "moduleId": "home/about",
         "nav": true,
