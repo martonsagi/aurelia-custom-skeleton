@@ -1,3 +1,4 @@
 export class Welcome {
-
+    attached() {
+    }
 }

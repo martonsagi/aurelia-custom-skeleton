@@ -1,6 +1,6 @@
 {
     "title": "Aurelia Skeleton",
-    "apiBaseUrl": "",
+    "apiBaseUrl": "data",
     "root": "layouts/layout-main",
     "routeUrl": "config.routes.json",
     "pushState": false,

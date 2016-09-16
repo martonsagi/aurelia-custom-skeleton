@@ -52,7 +52,7 @@ export class Startup {
             .get("config.app.json")
             .then(result => JSON.parse(result.response))
             .then(config => {
-                client.get(config.apiBaseUrl + config.routeUrl)
+                client.get(config.routeUrl)
                     .then(r => {
                         config.routes = t.updateRoutes(config, JSON.parse(r.response));
                         t.registry.set("config", config);

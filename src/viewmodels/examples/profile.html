@@ -1,0 +1,32 @@
+<template>
+
+    <div class="panel panel-primary">
+        <div class="panel-body">
+
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-6">
+                        <data-form show-toolbar.bind="true"
+                                   record.bind="user"
+                                   options.bind="options"
+                                   on-save.bind="saveUser"
+                                   on-cancel.bind="cancelUser" />
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <data-form show-toolbar.bind="true"
+                                   record.bind="changePw"
+                                   options.bind="pwOptions"
+                                   on-save.bind="changePassword"
+                                   on-cancel.bind="cancelPassword" />
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</template>

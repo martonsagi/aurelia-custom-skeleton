@@ -53,6 +53,30 @@
         }
     },
     {
+        "route": "profile",
+        "name": "profile",
+        "moduleId": "examples/profile",
+        "nav": true,
+        "title": "Profile",
+        "settings": {
+            "icon": "fa fa-user",
+            "parent": null,
+            "isRoute": true
+        }
+    },
+    {
+        "route": "editables",
+        "name": "editables",
+        "moduleId": "examples/editables",
+        "nav": true,
+        "title": "Editables",
+        "settings": {
+            "icon": "fa fa-table",
+            "parent": null,
+            "isRoute": true
+        }
+    },
+    {
         "route": ["submenu"],
         "name": "submenu",
         "moduleId": "home/about",

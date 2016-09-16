@@ -52,7 +52,7 @@
         "sources": [
             "node_modules/font-awesome/css/*.min.css",
             "node_modules/bootstrap/dist/css/*.min.css",
-            "node_modules/aureéia-editables/dist/css/*.css"
+            "node_modules/aurelia-editables/dist/css/*.css"
         ]
     },
     "copyFiles": [
@@ -69,6 +69,7 @@
         "output": "dist",
         "sources": [
             "./css/**/*",
+            "./data/**/*",
             "./fonts/**/*",
             "./locales/**/*",
             "./scripts/**/*",
@@ -126,6 +127,7 @@
                 "name": "vendor-bundle.js",
                 "prepend": [
                     "node_modules/bluebird/js/browser/bluebird.core.js",
+                    "node_modules/interact.js/dist/interact.min.js",
                     "scripts/require.js"
                 ],
                 "dependencies": [
@@ -204,7 +206,13 @@
                         "deps": ["jquery"],
                         "exports": "$"
                     },
-                    "moment"
+                    "moment",
+                    {
+                        "name": "aurelia-editables",
+                        "path": "../node_modules/aurelia-editables/dist/amd",
+                        "main": "aurelia-editables",
+                        "resources": ["**/*.html"]
+                    }
                 ]
             }
         ]

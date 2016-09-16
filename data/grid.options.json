@@ -1,0 +1,101 @@
+[
+    {
+        "name": "translation",
+        "api": "/data/grid.list.json",
+        "title": "Translations",
+        "titleIcon": null,
+        "editing": true,
+        "sorting": true,
+        "grouping": null,
+        "filtering": true,
+        "paging": {
+            "paging": null,
+            "size": 10
+        },
+        "toolbar": null,
+        "form": {
+            "toolbar": {
+                "paging": null,
+                "size": null
+            },
+            "groups": [],
+            "cols": null
+        },
+        "columns": [
+            {
+                "name": "LanguageCode",
+                "title": "Code",
+                "type": "text",
+                "format": null,
+                "template": null,
+                "hide": null,
+                "hideOnForm": null,
+                "filter": {
+                    "api": null,
+                    "values": null,
+                    "template": null
+                },
+                "editor": {
+                    "api": "/data/languages.json",
+                    "values": null,
+                    "type": "dropdown"
+                },
+                "validation": {},
+                "validationMode": null,
+                "placeholder": null,
+                "groupId": null,
+                "width": null
+            },
+            {
+                "name": "Name",
+                "title": "Név",
+                "type": "text",
+                "format": null,
+                "template": null,
+                "hide": null,
+                "hideOnForm": null,
+                "filter": {
+                    "api": null,
+                    "values": null,
+                    "template": null
+                },
+                "editor": {
+                    "api": null,
+                    "values": null,
+                    "type": "text"
+                },
+                "validation": {},
+                "validationMode": null,
+                "placeholder": null,
+                "groupId": null,
+                "width": null
+            },
+            {
+                "name": "Value",
+                "title": "Érték",
+                "type": "text",
+                "format": null,
+                "template": null,
+                "hide": null,
+                "hideOnForm": null,
+                "filter": {
+                    "api": null,
+                    "values": null,
+                    "template": null
+                },
+                "editor": {
+                    "api": null,
+                    "values": null,
+                    "type": "text"
+                },
+                "validation": {},
+                "validationMode": null,
+                "placeholder": null,
+                "groupId": null,
+                "width": null
+            }
+        ],
+        "children": [],
+        "childOptions": null
+    }
+]
