@@ -894,7 +894,7 @@ define('aurelia-editables/record-manager',["exports", "./record", "aurelia-frame
         RecordManager.prototype.remove = function remove(item) {
             var i = this.records.indexOf(item);
             if (item.state !== _record.RecordState.added) {
-                this[i].state = _record.RecordState.deleted;
+                this.records[i].state = _record.RecordState.deleted;
             } else {
                 this.records.splice(i, 1);
             }
@@ -1030,7 +1030,6 @@ define('aurelia-editables/record-manager',["exports", "./record", "aurelia-frame
                 }
             }
             if (this.records.length > 0) {
-                this.currentRecord = this.records[0];
                 this.currentRecord = this.records[0];
             }
         };
