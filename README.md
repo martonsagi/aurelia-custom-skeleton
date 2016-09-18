@@ -10,6 +10,7 @@
 * jquery
 * bootstrap
 * font-awesome
+* animated.css
 
 ## Custom build tasks
 
