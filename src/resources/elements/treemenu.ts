@@ -3,7 +3,6 @@
 import { bindable, containerless, autoinject } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 import {Registry} from '../../services/registry';
-import 'jquery';
 
 //#endregion
 
@@ -53,14 +52,13 @@ export class Treemenu {
     //#endregion
 
     click(event: Event) {
-        let target = $(event.target),
-            link = target.closest('a'),
-            submenu = link.next('ul');
+        let link = (<any>event.target).closest('a'),
+            submenu = link.parentNode.querySelector('ul');
 
-        if (submenu.length > 0) {
+        if (submenu) {
             event.preventDefault();
-            submenu.toggleClass('tree-hide');
-            link.toggleClass('tree-hidden');
+            submenu.classList.toggle('tree-hide');
+            link.classList.toggle('tree-hidden');
         } else {
 
             /*this.element.dispatchEvent(

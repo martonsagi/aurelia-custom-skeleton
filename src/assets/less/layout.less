@@ -9,3 +9,37 @@ body {
     margin-left: @sidebar-width;
     padding: 80px 20px 20px;
 }
+
+.animated {
+    -moz-animation-duration: 0.5s !important;
+    -o-animation-duration: 0.5s !important;
+    -webkit-animation-duration: 0.5s !important;
+    animation-duration: 0.5s !important;
+}
+
+
+.panel {
+    margin-bottom: 0;
+}
+
+.panel-primary > .panel-heading {
+    background-color: @color-primary;
+}
+
+.tab-content {
+    padding: 20px 0 10px;
+}
+
+.nav.nav-tabs {
+    .box-shadow(@sizes: inset 0 -1px 0, @color: @color-box-shadow);
+
+    li > a {
+        font-size: 1.2em;
+    }
+
+    li:not(.active) > a {
+        box-shadow: none;
+    }
+
+}
+

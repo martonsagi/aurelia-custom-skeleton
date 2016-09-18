@@ -50,8 +50,10 @@
         "output": "src/assets/css",
         "filename": "base.css",
         "sources": [
+            "src/assets/bootswatch.paper/fonts.css",
             "node_modules/font-awesome/css/*.min.css",
-            "node_modules/bootstrap/dist/css/*.min.css",
+            "node_modules/animate.css/animate.min.css",
+            "src/assets/bootswatch.paper/bootswatch.paper.min.css",
             "node_modules/aurelia-editables/dist/css/*.css"
         ]
     },
@@ -61,7 +63,8 @@
             "output": "fonts",
             "sources": [
                 "node_modules/font-awesome/fonts/*",
-                "node_modules/bootstrap/dist/fonts/*"
+                "node_modules/bootstrap/dist/fonts/*",
+                "src/assets/bootswatch.paper/fonts/*"
             ]
         }
     ],

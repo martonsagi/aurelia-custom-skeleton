@@ -10,7 +10,7 @@
         "filtering": true,
         "paging": {
             "paging": null,
-            "size": 10
+            "size": 30
         },
         "toolbar": null,
         "form": {
