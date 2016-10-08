@@ -27,7 +27,6 @@
     "aurelia-templating-binding": "github:aurelia/templating-binding",
     "aurelia-templating-resources": "github:aurelia/templating-resources",
     "aurelia-templating-router": "github:aurelia/templating-router",
-    "aurelia-validatejs": "github:aurelia/validatejs",
     "aurelia-validation": "github:aurelia/validation",
     "lodash": "registry:npm/lodash#4.0.0+20160723033700"
   },
@@ -41,7 +40,6 @@
     "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20160524142046"
   },
   "globalDependencies": {
-    "i18next": "registry:dt/i18next#2.3.4+20160803175212",
-    "i18next-xhr-backend": "file:./node_modules/i18next-xhr-backend/typings/i18next-xhr-backend.d.ts"
+    "i18next": "registry:dt/i18next#2.3.4+20160803175212"
   }
 }

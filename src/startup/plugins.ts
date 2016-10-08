@@ -28,5 +28,6 @@ export function configurePlugins(aurelia: Aurelia, globalConfig: any) {
 
             return instance.setup(setup);
         })
+        .plugin('aurelia-ui-virtualization')
         .plugin('aurelia-editables');
 }

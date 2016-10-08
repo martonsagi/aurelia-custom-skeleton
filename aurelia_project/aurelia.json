@@ -195,7 +195,17 @@
                         "path": "../node_modules/i18next-xhr-backend/dist/umd",
                         "main": "i18nextXHRBackend"
                     },
-                    "lodash",
+                    {
+                        "name": "aurelia-ui-virtualization",
+                        "path": "../node_modules/aurelia-ui-virtualization/dist/amd",
+                        "main": "aurelia-ui-virtualization"
+                    },
+                    {
+                        "name": "aurelia-editables",
+                        "path": "../node_modules/aurelia-editables/dist/amd",
+                        "main": "aurelia-editables",
+                        "resources": ["**/*.html"]
+                    },
                     {
                         "name": "jquery",
                         "path": "../node_modules/jquery/dist",
@@ -207,13 +217,6 @@
                         "main": "js/bootstrap.min",
                         "deps": ["jquery"],
                         "exports": "$"
-                    },
-                    "moment",
-                    {
-                        "name": "aurelia-editables",
-                        "path": "../node_modules/aurelia-editables/dist/amd",
-                        "main": "aurelia-editables",
-                        "resources": ["**/*.html"]
                     }
                 ]
             }

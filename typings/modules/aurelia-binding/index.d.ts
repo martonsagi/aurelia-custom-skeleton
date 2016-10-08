@@ -188,6 +188,40 @@ export interface InternalPropertyObserver {
 }
 
 /**
+ * Property observer for HTML Attributes.
+ */
+export class DataAttributeObserver implements InternalPropertyObserver {
+  /**
+   * Gets the property value.
+   */
+  getValue(): any;
+  /**
+   * Sets the property value.
+   */
+  setValue(newValue: any): void;
+  /**
+   * Subscribe to property changes with a callback function.
+   */
+  subscribe(callback: (newValue: any, oldValue: any) => void): void;
+  /**
+   * Subscribe a callable object to property changes.
+   * @param context A value to be passed to the callable object's call function when a property change occurs.
+   * @param callable A callable object.
+   */
+  subscribe(context: any, callable: Callable): void;
+  /**
+   * Unsubscribes a callback function from property changes.
+   */
+  unsubscribe(callback: (newValue: any, oldValue: any) => void): void;
+  /**
+   * Unsubscribes a callable object from property changes.
+   * @param context A value to be passed to the callable object's call function when a property change occurs.
+   * @param callable A callable object.
+   */
+  unsubscribe(context: any, callable: Callable): void;
+}
+
+/**
  * Observes collection mutation.
  */
 export interface InternalCollectionObserver {
@@ -287,6 +321,23 @@ export interface NameExpression {
 }
 
 /**
+ * An expression AST visitor.
+ */
+export interface ExpressionVisitor {}
+
+/**
+ * Visits an expression AST and returns the string equivalent.
+ */
+export class Unparser implements ExpressionVisitor {
+  constructor(buffer: string[]);
+}
+
+/**
+ * Clones an expression AST.
+ */
+export class ExpressionCloner implements ExpressionVisitor {}
+
+/**
  * Provides the base class from which the classes that represent expression tree nodes are derived.
  */
 export class Expression {
@@ -304,6 +355,11 @@ export class Expression {
    * Subscribes a binding instance to the property change events along the path of the expression.
    */
   connect(binding: Binding, scope: Scope): void;
+  /**
+   * Accepts an expression visitor.
+   */
+  accept(visitor: ExpressionVisitor): void;
+
 }
 
 /**
@@ -414,8 +470,8 @@ export class Conditional extends Expression {
  * A literal primitive (null, undefined, number, boolean).
  */
 export class LiteralPrimitive extends Expression {
-  value: null|undefined|number|boolean;
-  constructor(value: null|undefined|number|boolean);
+  value: any;
+  constructor(value: any);
 }
 
 /**

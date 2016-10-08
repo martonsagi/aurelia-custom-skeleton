@@ -10,7 +10,7 @@
         "filtering": true,
         "paging": {
             "paging": null,
-            "size": 30
+            "size": 5
         },
         "toolbar": null,
         "form": {
@@ -40,7 +40,7 @@
                     "values": null,
                     "type": "dropdown"
                 },
-                "validation": {},
+                "validation": {"required": []},
                 "validationMode": null,
                 "placeholder": null,
                 "groupId": null,
@@ -64,7 +64,7 @@
                     "values": null,
                     "type": "text"
                 },
-                "validation": {},
+                "validation": {"required": [], "email": [], "minLength": [10]},
                 "validationMode": null,
                 "placeholder": null,
                 "groupId": null,
@@ -88,7 +88,7 @@
                     "values": null,
                     "type": "text"
                 },
-                "validation": {},
+                "validation": {"required": [], "maxLength": [25]},
                 "validationMode": null,
                 "placeholder": null,
                 "groupId": null,

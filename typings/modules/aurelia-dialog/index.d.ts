@@ -1580,8 +1580,9 @@ export class Controller {
     * @param behavior The HtmlBehaviorResource that provides the base behavior for this controller.
     * @param instruction The instructions pertaining to the controller's behavior.
     * @param viewModel The developer's view model instance which provides the custom behavior for this controller.
+    * @param container The container that the controller's view was created from.
     */
-  constructor(behavior: HtmlBehaviorResource, instruction: BehaviorInstruction, viewModel: Object, elementEvents?: ElementEvents);
+  constructor(behavior: HtmlBehaviorResource, instruction: BehaviorInstruction, viewModel: Object, container: Container);
   
   /**
     * Invoked when the view which contains this controller is created.
@@ -2480,7 +2481,12 @@ export class Factory {
 export class NewInstance {
     key: any;
     asKey: any;
-    constructor(key: any);
+    /**
+    * Creates an instance of the NewInstance class.
+    * @param key The key to resolve/instantiate.
+    * @param dynamicDependencies An optional list of dynamic dependencies.
+    */
+    constructor(key: any, ...dynamicDependencies: any[]);
     /**
     * Called by the container to instantiate the dependency and potentially register
     * as another key if the `as` method was used.
@@ -2497,9 +2503,10 @@ export class NewInstance {
     /**
     * Creates an NewInstance Resolver for the supplied key.
     * @param key The key to resolve/instantiate.
+    * @param dynamicDependencies An optional list of dynamic dependencies.
     * @return Returns an instance of NewInstance for the key.
     */
-    static of(key: any): NewInstance;
+    static of(key: any, ...dynamicDependencies: any[]): NewInstance;
 }
 export function getDecoratorDependencies(target: any, name: any): any;
 /**
@@ -2521,7 +2528,7 @@ export function parent(target: any, key: any, index: any): void;
 /**
 * Decorator: Specifies the dependency as a new instance
 */
-export function newInstance(asKeyOrTarget?: any): (target: any, key: any, index: any) => void;
+export function newInstance(asKeyOrTarget?: any, ...dynamicDependencies: any[]): (target: any, key: any, index: any) => void;
 /**
 * Decorator: Specifies a custom Invoker for the decorated item.
 */

@@ -26,6 +26,11 @@ export interface Task {
 export class TaskQueue {
   
   /**
+     * Whether the queue is in the process of flushing.
+     */
+  flushing: any;
+  
+  /**
     * Creates an instance of TaskQueue.
     */
   constructor();
